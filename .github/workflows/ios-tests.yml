@@ -53,4 +53,4 @@ jobs:
         fi
         echo "Checking $SWIFT_FILE..."
         # This command checks syntax without needing a full Xcode project
-        swiftc -parse -sdk $(xcrun --show-sdk-path --sdk iphoneos) "$SWIFT_FILE"
+        swiftc -parse -target arm64-apple-ios15.0 -sdk $(xcrun --show-sdk-path --sdk iphoneos) "$SWIFT_FILE"
