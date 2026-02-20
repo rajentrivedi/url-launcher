@@ -1,0 +1,71 @@
+{
+    "name": "nativephp/url-launcher",
+    "version": "1.0.0",
+    "description": "A NativePHP Mobile plugin for communicating with device functionalities",
+    "namespace": "UrlLauncher",
+    "keywords": [],
+    "category": "utilities",
+    "license": "MIT",
+    "pricing": {
+        "type": "free"
+    },
+    "author": {
+        "name": "Your Name",
+        "email": "you@example.com",
+        "url": ""
+    },
+    "homepage": "",
+    "repository": "",
+    "funding": [],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "icon": "resources/icon.png",
+    "screenshots": [],
+    "bridge_functions": [
+        {
+            "name": "UrlLauncher.Execute",
+            "android": "com.nativephp.plugins.url_launcher.UrlLauncherFunctions.Execute",
+            "ios": "UrlLauncherFunctions.Execute",
+            "description": "Execute the plugin functionality"
+        },
+        {
+            "name": "UrlLauncher.GetStatus",
+            "android": "com.nativephp.plugins.url_launcher.UrlLauncherFunctions.GetStatus",
+            "ios": "UrlLauncherFunctions.GetStatus",
+            "description": "Get the current status"
+        }
+    ],
+    "android": {
+        "permissions": [],
+        "repositories": [],
+        "dependencies": {
+            "implementation": []
+        },
+        "activities": [],
+        "services": [],
+        "receivers": [],
+        "providers": []
+    },
+    "ios": {
+        "permissions": [],
+        "repositories": [],
+        "dependencies": {
+            "swift_packages": [],
+            "pods": []
+        }
+    },
+    "assets": {
+        "android": [],
+        "ios": []
+    },
+    "secrets": [],
+    "events": [
+        "Nativephp\\UrlLauncher\\Events\\UrlLauncherCompleted"
+    ],
+    "service_provider": "Nativephp\\UrlLauncher\\UrlLauncherServiceProvider",
+    "hooks": {
+        "copy_assets": "nativephp:url-launcher:copy-assets"
+    }
+}
