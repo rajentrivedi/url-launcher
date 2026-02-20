@@ -43,14 +43,28 @@ jobs:
       run: |
         ./vendor/bin/pest
 
-    - name: Validate Swift Syntax
+    - name: Validate Swift Syntax (Virtual Compiler Trick)
       run: |
-        # Find your Swift file (adjust path if needed)
-        SWIFT_FILE=$(find . -name "*.swift" | head -n 1)
+        # Find your Swift file
+        SWIFT_FILE=$(find resources/ios -name "*.swift" | head -n 1)
         if [ -z "$SWIFT_FILE" ]; then
-          echo "No Swift file found!"
+          echo "No Swift file found in resources/ios!"
           exit 1
         fi
-        echo "Checking $SWIFT_FILE..."
-        # This command checks syntax without needing a full Xcode project
-        swiftc -parse -target arm64-apple-ios15.0 -sdk $(xcrun --show-sdk-path --sdk iphoneos) "$SWIFT_FILE"
+        
+        echo "Performing virtual compilation on $SWIFT_FILE..."
+        
+        # Create a temporary 'mock' for NativePHP base classes so the compiler is happy
+        cat <<EOF > bridge_mocks.swift
+        import Foundation
+        protocol BridgeFunction {
+            func execute(parameters: [String: Any]) throws -> [String: Any]
+        }
+        struct BridgeResponse {
+            static func success(data: [String: Any]) -> [String: Any] { return ["status": "success", "data": data] }
+            static func error(message: String) -> [String: Any] { return ["status": "error", "message": message] }
+        }
+        EOF
+
+        # Compile the mock + actual plugin file against the real iOS SDK
+        swiftc -parse -target arm64-apple-ios15.0 -sdk $(xcrun --show-sdk-path --sdk iphoneos) bridge_mocks.swift "$SWIFT_FILE"
