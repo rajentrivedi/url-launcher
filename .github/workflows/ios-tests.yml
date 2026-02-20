@@ -43,7 +43,14 @@ jobs:
       run: |
         ./vendor/bin/pest
 
-    - name: Swift Syntax Check
+    - name: Validate Swift Syntax
       run: |
-        # Basic check to ensure the Swift file is at least syntactically correct
-        swiftc -parse resources/ios/UrlLauncherFunctions.swift
+        # Find your Swift file (adjust path if needed)
+        SWIFT_FILE=$(find . -name "*.swift" | head -n 1)
+        if [ -z "$SWIFT_FILE" ]; then
+          echo "No Swift file found!"
+          exit 1
+        fi
+        echo "Checking $SWIFT_FILE..."
+        # This command checks syntax without needing a full Xcode project
+        swiftc -parse -sdk $(xcrun --show-sdk-path --sdk iphoneos) "$SWIFT_FILE"
