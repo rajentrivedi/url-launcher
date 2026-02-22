@@ -115,7 +115,7 @@ describe('PHP Classes', function () {
         expect(file_exists($file))->toBeTrue();
 
         $content = file_get_contents($file);
-        expect($content)->toContain('namespace Rajen\UrlLauncher');
+        expect($content)->toContain('namespace Rajen\NativePhpUrlLauncher');
         expect($content)->toContain('class UrlLauncherServiceProvider');
     });
 
@@ -124,7 +124,7 @@ describe('PHP Classes', function () {
         expect(file_exists($file))->toBeTrue();
 
         $content = file_get_contents($file);
-        expect($content)->toContain('namespace Rajen\UrlLauncher\Facades');
+        expect($content)->toContain('namespace Rajen\NativePhpUrlLauncher\Facades');
         expect($content)->toContain('class UrlLauncher extends Facade');
     });
 
@@ -133,7 +133,7 @@ describe('PHP Classes', function () {
         expect(file_exists($file))->toBeTrue();
 
         $content = file_get_contents($file);
-        expect($content)->toContain('namespace Rajen\UrlLauncher');
+        expect($content)->toContain('namespace Rajen\NativePhpUrlLauncher');
         expect($content)->toContain('class UrlLauncher');
     });
 });

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rajen\UrlLauncher\Contracts;
+namespace Rajen\NativePhpUrlLauncher\Contracts;
 
 interface UrlLauncherDriver
 {

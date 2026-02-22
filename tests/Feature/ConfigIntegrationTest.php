@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
-use Rajen\UrlLauncher\Bridge\MobileBridge;
-use Rajen\UrlLauncher\Drivers\AndroidDriver;
-use Rajen\UrlLauncher\Support\UrlValidator;
+use Rajen\NativePhpUrlLauncher\Bridge\MobileBridge;
+use Rajen\NativePhpUrlLauncher\Drivers\AndroidDriver;
+use Rajen\NativePhpUrlLauncher\Support\UrlValidator;
 
 it('respects allowed_schemes from configuration', function () {
     // Initial state (default schemes)

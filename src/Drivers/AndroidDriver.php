@@ -1,13 +1,13 @@
 <?php
 
-namespace Rajen\UrlLauncher\Drivers;
+namespace Rajen\NativePhpUrlLauncher\Drivers;
 
-use Rajen\UrlLauncher\Bridge\MobileBridge;
-use Rajen\UrlLauncher\Contracts\UrlLauncherDriver;
-use Rajen\UrlLauncher\Events\UrlLaunched;
-use Rajen\UrlLauncher\Support\PhoneFormatter;
-use Rajen\UrlLauncher\Support\Response;
-use Rajen\UrlLauncher\Support\UrlValidator;
+use Rajen\NativePhpUrlLauncher\Bridge\MobileBridge;
+use Rajen\NativePhpUrlLauncher\Contracts\UrlLauncherDriver;
+use Rajen\NativePhpUrlLauncher\Events\UrlLaunched;
+use Rajen\NativePhpUrlLauncher\Support\PhoneFormatter;
+use Rajen\NativePhpUrlLauncher\Support\Response;
+use Rajen\NativePhpUrlLauncher\Support\UrlValidator;
 
 class AndroidDriver implements UrlLauncherDriver
 {

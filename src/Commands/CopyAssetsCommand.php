@@ -1,6 +1,6 @@
 <?php
 
-namespace Rajen\UrlLauncher\Commands;
+namespace Rajen\NativePhpUrlLauncher\Commands;
 
 use Native\Mobile\Plugins\Commands\NativePluginHookCommand;
 

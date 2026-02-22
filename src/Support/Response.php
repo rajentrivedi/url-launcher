@@ -1,6 +1,6 @@
 <?php
 
-namespace Rajen\UrlLauncher\Support;
+namespace Rajen\NativePhpUrlLauncher\Support;
 
 class Response
 {

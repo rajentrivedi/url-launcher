@@ -1,9 +1,9 @@
 <?php
 
-namespace Rajen\UrlLauncher;
+namespace Rajen\NativePhpUrlLauncher;
 
 use Illuminate\Support\ServiceProvider;
-use Rajen\UrlLauncher\Commands\CopyAssetsCommand;
+use Rajen\NativePhpUrlLauncher\Commands\CopyAssetsCommand;
 
 class UrlLauncherServiceProvider extends ServiceProvider
 {

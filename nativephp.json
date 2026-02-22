@@ -1,5 +1,5 @@
 {
-    "name": "nativephp/url-launcher",
+    "name": "rajen/nativephp-url-launcher",
     "version": "1.0.0",
     "description": "A NativePHP Mobile plugin for communicating with device functionalities",
     "namespace": "UrlLauncher",
@@ -10,12 +10,12 @@
         "type": "free"
     },
     "author": {
-        "name": "Your Name",
-        "email": "you@example.com",
-        "url": ""
+        "name": "Rajen Trivedi",
+        "email": "larave.rajen@gmail.com",
+        "url": "https://github.com/rajen"
     },
-    "homepage": "",
-    "repository": "",
+    "homepage": "https://github.com/rajen/nativephp-url-launcher",
+    "repository": "https://github.com/rajen/nativephp-url-launcher",
     "funding": [],
     "platforms": [
         "android",
@@ -64,9 +64,9 @@
     },
     "secrets": [],
     "events": [
-        "Rajen\\UrlLauncher\\Events\\UrlLauncherCompleted"
+        "Rajen\\NativePhpUrlLauncher\\Events\\UrlLauncherCompleted"
     ],
-    "service_provider": "Rajen\\UrlLauncher\\UrlLauncherServiceProvider",
+    "service_provider": "Rajen\\NativePhpUrlLauncher\\UrlLauncherServiceProvider",
     "hooks": {
         "copy_assets": "nativephp:url-launcher:copy-assets"
     }

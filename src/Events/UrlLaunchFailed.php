@@ -1,6 +1,6 @@
 <?php
 
-namespace Rajen\UrlLauncher\Events;
+namespace Rajen\NativePhpUrlLauncher\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 

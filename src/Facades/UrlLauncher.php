@@ -1,6 +1,6 @@
 <?php
 
-namespace Rajen\UrlLauncher\Facades;
+namespace Rajen\NativePhpUrlLauncher\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Facade;
  * @method static array openInAppBrowser(string $url)
  * @method static array openCustomScheme(string $url)
  *
- * @see \Rajen\UrlLauncher\UrlLauncher
+ * @see \Rajen\NativePhpUrlLauncher\UrlLauncher
  */
 class UrlLauncher extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Rajen\UrlLauncher\UrlLauncher::class;
+        return \Rajen\NativePhpUrlLauncher\UrlLauncher::class;
     }
 }

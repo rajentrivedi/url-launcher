@@ -1,6 +1,6 @@
 <?php
 
-use Rajen\UrlLauncher\Support\UrlValidator;
+use Rajen\NativePhpUrlLauncher\Support\UrlValidator;
 
 it('validates allowed schemes correctly', function () {
     // Default allowed schemes (http, https, mailto, tel, sms, geo, whatsapp)

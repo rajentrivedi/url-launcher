@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests;
+namespace Rajen\NativePhpUrlLauncher\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use Rajen\UrlLauncher\UrlLauncherServiceProvider;
+use Rajen\NativePhpUrlLauncher\UrlLauncherServiceProvider;
 
 abstract class TestCase extends BaseTestCase
 {

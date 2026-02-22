@@ -6,4 +6,4 @@
 |--------------------------------------------------------------------------
 */
 
-uses(Tests\TestCase::class)->in('.');
+uses(Rajen\NativePhpUrlLauncher\Tests\TestCase::class)->in('.');
