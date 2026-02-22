@@ -1,6 +1,6 @@
 <?php
 
-use Nativephp\UrlLauncher\Support\PhoneFormatter;
+use Rajen\UrlLauncher\Support\PhoneFormatter;
 
 it('formats phone numbers correctly', function () {
     expect(PhoneFormatter::format('+1 (234) 567-890'))->toBe('+1234567890');

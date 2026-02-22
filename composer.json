@@ -1,43 +1,44 @@
 {
-    "name": "nativephp/url-launcher",
-    "version": "1.0.0",
-    "description": "A NativePHP Mobile plugin for communicating with device functionalities",
-    "type": "nativephp-plugin",
+    "name": "rajen/nativephp-url-launcher",
+    "description": "Native external URL and deep link launcher for NativePHP applications.",
+    "type": "library",
     "license": "MIT",
+    "keywords": [
+        "nativephp",
+        "url",
+        "deep-link",
+        "mobile",
+        "android",
+        "ios"
+    ],
+    "homepage": "https://github.com/rajen/nativephp-url-launcher",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "you@example.com"
+            "name": "Rajen Trivedi",
+            "email": "your@email.com"
         }
     ],
     "require": {
-        "php": "^8.2",
-        "nativephp/mobile": "^3.0"
+        "php": "^8.1",
+        "nativephp/framework": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "Nativephp\\UrlLauncher\\": "src/"
+            "Rajen\\NativePhpUrlLauncher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rajen\\NativePhpUrlLauncher\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Nativephp\\UrlLauncher\\UrlLauncherServiceProvider"
+                "Rajen\\NativePhpUrlLauncher\\UrlLauncherServiceProvider"
             ]
-        },
-        "nativephp": {
-            "manifest": "nativephp.json"
         }
     },
-    "require-dev": {
-        "pestphp/pest": "^3.0"
-    },
-    "scripts": {
-        "test": "pest"
-    },
-    "config": {
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
-    }
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

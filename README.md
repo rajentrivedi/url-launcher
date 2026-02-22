@@ -4,6 +4,13 @@ A NativePHP Mobile plugin for communicating with device functionalities like the
 
 Similar to Flutter's `url_launcher`, but tailored for NativePHP mobile.
 
+Browser functionalities are already provided by NativePHP, so this plugin is only for other functionalities, for browser functionalities use 
+## Browser functionalities
+
+```php
+composer require nativephp/mobile-browser
+```
+
 ## Requirements
 
 - PHP 8.2+
@@ -13,7 +20,7 @@ Similar to Flutter's `url_launcher`, but tailored for NativePHP mobile.
 ## Installation
 
 ```bash
-composer require nativephp/url-launcher
+composer require rajen/nativephp-url-launcher
 ```
 
 Publish the configuration file:
@@ -27,10 +34,8 @@ php artisan vendor:publish --tag="nativephp-url-launcher-config"
 The plugin exposes a Laravel Facade, making it extremely easy to use:
 
 ```php
-use Nativephp\UrlLauncher\Facades\UrlLauncher;
+use Rajen\UrlLauncher\Facades\UrlLauncher;
 
-// Open a basic website in the external browser
-UrlLauncher::launch('https://nativephp.com');
 
 // Send an email
 UrlLauncher::openEmail('hello@nativephp.com', 'Support Request', 'Hello from my app!');
@@ -106,18 +111,23 @@ Add this to your `Info.plist`:
 
 You can listen to URL Launcher events using standard Laravel Event listeners:
 
-- `Nativephp\UrlLauncher\Events\UrlLaunched`
-- `Nativephp\UrlLauncher\Events\UrlLaunchFailed`
-- `Nativephp\UrlLauncher\Events\DeepLinkReceived`
+- `Rajen\UrlLauncher\Events\UrlLaunched`
+- `Rajen\UrlLauncher\Events\UrlLaunchFailed`
+- `Rajen\UrlLauncher\Events\DeepLinkReceived`
+- `Rajen\UrlLauncher\Events\UrlLaunchCompleted`
+- `Illuminate\Support\Facades\Event`
 
 Example:
 
 ```php
-use Nativephp\UrlLauncher\Events\DeepLinkReceived;
+use Rajen\UrlLauncher\Events\UrlLaunched;
+use Rajen\UrlLauncher\Events\UrlLaunchFailed;
+use Rajen\UrlLauncher\Events\DeepLinkReceived;
+use Rajen\UrlLauncher\Events\UrlLaunchCompleted;
 use Illuminate\Support\Facades\Event;
 
 Event::listen(function (DeepLinkReceived $event) {
-    Log::info("Returned from app with URL: " . $event->url);
+    // do something
 });
 ```
 ```
@@ -125,3 +135,13 @@ Event::listen(function (DeepLinkReceived $event) {
 ## License
 
 MIT
+
+```markdown
+## Support
+
+For bug reports and feature requests, please open an issue on GitHub.
+
+For private inquiries, contact:
+- 📧 [laravel.rajen@gmail.com](mailto:laravel.rajen@gmail.com)
+*[Markdown Guide](https://www.markdownguide.org)*
+```

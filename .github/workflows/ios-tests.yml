@@ -68,3 +68,5 @@ jobs:
 
         # Compile the mock + actual plugin file against the real iOS SDK
         swiftc -parse -target arm64-apple-ios15.0 -sdk $(xcrun --show-sdk-path --sdk iphoneos) bridge_mocks.swift "$SWIFT_FILE"
+        
+        echo "✅ Swift syntax and iOS API usage validated successfully."

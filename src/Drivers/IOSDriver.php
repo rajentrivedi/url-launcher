@@ -1,13 +1,13 @@
 <?php
 
-namespace Nativephp\UrlLauncher\Drivers;
+namespace Rajen\UrlLauncher\Drivers;
 
-use Nativephp\UrlLauncher\Bridge\MobileBridge;
-use Nativephp\UrlLauncher\Contracts\UrlLauncherDriver;
-use Nativephp\UrlLauncher\Events\UrlLaunched;
-use Nativephp\UrlLauncher\Support\PhoneFormatter;
-use Nativephp\UrlLauncher\Support\Response;
-use Nativephp\UrlLauncher\Support\UrlValidator;
+use Rajen\UrlLauncher\Bridge\MobileBridge;
+use Rajen\UrlLauncher\Contracts\UrlLauncherDriver;
+use Rajen\UrlLauncher\Events\UrlLaunched;
+use Rajen\UrlLauncher\Support\PhoneFormatter;
+use Rajen\UrlLauncher\Support\Response;
+use Rajen\UrlLauncher\Support\UrlValidator;
 
 class IOSDriver implements UrlLauncherDriver
 {
@@ -17,7 +17,8 @@ class IOSDriver implements UrlLauncherDriver
             return MobileBridge::fail($url, "Invalid scheme or not allowed.");
         }
 
-        $payload = array_merge(['url' => $url, 'action' => 'launch'], $options);
+        $mode = $options['mode'] ?? config('nativephp-mobile-url-launcher.default_mode', 'external');
+        $payload = array_merge(['url' => $url, 'action' => 'launch', 'mode' => $mode], $options);
         $result = MobileBridge::call('UrlLauncher.Execute', $payload);
 
         UrlLaunched::dispatch($url, $options);

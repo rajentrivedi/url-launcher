@@ -1,9 +1,9 @@
 <?php
 
-namespace Nativephp\UrlLauncher\Bridge;
+namespace Rajen\UrlLauncher\Bridge;
 
 use Illuminate\Support\Facades\Log;
-use Nativephp\UrlLauncher\Events\UrlLaunchFailed;
+use Rajen\UrlLauncher\Events\UrlLaunchFailed;
 
 class MobileBridge
 {
@@ -40,6 +40,6 @@ class MobileBridge
     {
         UrlLaunchFailed::dispatch($url, $reason);
 
-        return \Nativephp\UrlLauncher\Support\Response::make(false, $reason);
+        return \Rajen\UrlLauncher\Support\Response::make(false, $reason);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nativephp\UrlLauncher\Events;
+namespace Rajen\UrlLauncher\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;

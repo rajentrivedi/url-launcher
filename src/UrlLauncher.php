@@ -1,10 +1,10 @@
 <?php
 
-namespace Nativephp\UrlLauncher;
+namespace Rajen\UrlLauncher;
 
-use Nativephp\UrlLauncher\Contracts\UrlLauncherDriver;
-use Nativephp\UrlLauncher\Drivers\AndroidDriver;
-use Nativephp\UrlLauncher\Drivers\IOSDriver;
+use Rajen\UrlLauncher\Contracts\UrlLauncherDriver;
+use Rajen\UrlLauncher\Drivers\AndroidDriver;
+use Rajen\UrlLauncher\Drivers\IOSDriver;
 use Native\Mobile\System;
 
 class UrlLauncher implements UrlLauncherDriver
