@@ -25,7 +25,7 @@ describe('Plugin Manifest', function () {
         $manifest = json_decode(file_get_contents($this->manifestPath), true);
 
         expect($manifest)->toHaveKeys(['name', 'namespace', 'bridge_functions']);
-        expect($manifest['name'])->toBe('nativephp/url-launcher');
+        expect($manifest['name'])->toBe('rajen/nativephp-url-launcher');
         expect($manifest['namespace'])->toBe('UrlLauncher');
     });
 
