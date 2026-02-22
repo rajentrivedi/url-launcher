@@ -130,8 +130,6 @@ Event::listen(function (DeepLinkReceived $event) {
     // do something
 });
 ```
-```
-
 ## License
 
 MIT
