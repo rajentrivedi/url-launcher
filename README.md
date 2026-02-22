@@ -136,12 +136,6 @@ Event::listen(function (DeepLinkReceived $event) {
 
 MIT
 
-```markdown
 ## Support
 
-For bug reports and feature requests, please open an issue on GitHub.
-
-For private inquiries, contact:
-- 📧 [laravel.rajen@gmail.com](mailto:laravel.rajen@gmail.com)
-*[Markdown Guide](https://www.markdownguide.org)*
-```
+For questions, feature requests, or issues, please contact [laravel.rajen@gmail.com](mailto:laravel.rajen@gmail.com).
