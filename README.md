@@ -130,7 +130,6 @@ Event::listen(function (DeepLinkReceived $event) {
 
 MIT
 
-
 ## Support
 
 For questions, feature requests, or issues, please contact [laravel.rajen@gmail.com](mailto:laravel.rajen@gmail.com).
