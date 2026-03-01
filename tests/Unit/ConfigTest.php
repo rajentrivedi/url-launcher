@@ -24,7 +24,6 @@ it('has correct default values in the application', function () {
         'geo',
         'whatsapp',
     ]);
-    
     expect($config['enable_logging'])->toBeFalse();
 });
 
