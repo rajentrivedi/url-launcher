@@ -4,12 +4,8 @@ A NativePHP Mobile plugin for communicating with device functionalities like the
 
 Similar to Flutter's `url_launcher`, but tailored for NativePHP mobile.
 
-Browser functionalities are already provided by NativePHP, so this plugin is only for other functionalities, for browser functionalities use 
-## Browser functionalities
+Browser functionalities are already provided by NativePHP, so this plugin is only for other functionalities, for browser functionalities use [NativePHP Mobile Borwser](https://github.com/NativePHP/mobile-browser)
 
-```php
-composer require nativephp/mobile-browser
-```
 
 ## Requirements
 

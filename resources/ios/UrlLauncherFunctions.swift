@@ -25,12 +25,8 @@ enum UrlLauncherFunctions {
             let semaphore = DispatchSemaphore(value: 0)
 
             DispatchQueue.main.async {
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:]) { success in
-                        launched = success
-                        semaphore.signal()
-                    }
-                } else {
+                UIApplication.shared.open(url, options: [:]) { success in
+                    launched = success
                     semaphore.signal()
                 }
             }

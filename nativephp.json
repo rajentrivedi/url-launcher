@@ -51,6 +51,16 @@
     },
     "ios": {
         "min_version": "13.0",
+        "info_plist": {
+            "LSApplicationQueriesSchemes": [
+                "whatsapp",
+                "mailto",
+                "tel",
+                "sms",
+                "comgooglemaps",
+                "twitter"
+            ]
+        },
         "permissions": [],
         "repositories": [],
         "dependencies": {
